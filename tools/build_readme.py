@@ -184,7 +184,7 @@ def portrait_data_uri():
 
 def front_page():
     H = 680
-    s = Svg(W, H, "Dat Le — I build systems & chase ideas worth testing. UF Computer Engineering '27, open to ML & AI roles.")
+    s = Svg(W, H, "Dat Le — I build systems & chase ideas worth testing. UF Computer Science '27, open to ML & AI roles.")
     wobble_css(s)
     # Scene: Earth-26 front page — red photocopy with black halftone.
     s.rect(0, 0, W, H, "#d7132e")
@@ -244,7 +244,7 @@ def front_page():
     s.add("</g>")
 
     # Left column: caption, headline, intro panel, buttons.
-    s.caption(40, 92, "UF Computer Engineering '27 · Open to ML & AI roles", rot=-1, size=11)
+    s.caption(40, 92, "UF Computer Science '27 · Open to ML & AI roles", rot=-1, size=11)
     for i, (line, col) in enumerate((("I BUILD SYSTEMS", FG), ("& CHASE IDEAS", A3), ("WORTH TESTING.", FG))):
         s.misprint(40, 206 + i * 74, line, 78, col, ls=1.5)
     px, py, pw = 44, 392, 450
@@ -294,9 +294,9 @@ def front_page():
     ix, iy = fx + fw - 74, fy - 50
     s.add(f'<g transform="rotate(6 {ix + 44} {iy + 46})">')
     s.box(ix, iy, 88, 94, PAPER, A1, 5)
-    s.text(ix + 44, iy + 22, "VOL. 01", "mono", 10, INK, "middle", 2.0)
-    s.text(ix + 44, iy + 62, "#26", "display", 40, INK, "middle")
-    s.text(ix + 44, iy + 82, "NEW GRAD", "mono", 9, INK, "middle", 1.8)
+    s.text(ix + 44, iy + 22, "CLASS OF", "mono", 10, INK, "middle", 2.0)
+    s.text(ix + 44, iy + 62, "'27", "display", 40, INK, "middle")
+    s.text(ix + 44, iy + 82, "UF CS", "mono", 9, INK, "middle", 1.8)
     s.add("</g>")
     # Starburst sticker.
     cx, cy = fx - 6, fy + fh + 6
